@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        body{
+            color: white;
+            background-color: rgb(148, 148, 241);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] //a variável p1 recebe um parágrafo. Isso acontece pois o document.getelementsbytagname busca tags com, nesse caso, o nome 'p' e depois caso necessario se especifica qual tag vai ser utilizada 1,2,3.... que nesse caso foi [1]. Assim é possível fazer alterações nas tag atravez de códigos em javascript
+
+        var corpo = document.body//Aqui o body/head podem ser acessados diretamente a partir do document, sem a necessidade do getelementsbytagname
+
+        p1.style.color = 'purple' //pega a variavel p1(que a ela foi atribuido um parágrafo específico) e mudo o style dela na parte da cor da letra.
+
+        document.write(p1.innerHTML +" teste1<br>")//É escrito em uma nova linha do documento todo o conteudo de p1 INCLUINDO as formatações.
+
+        document.write(p1.innerText +" teste2")//É escrito em uma nova linha do documento apenas a parte de texto armazenada em p1.
+
+        corpo.style.background = 'pink'//Utiliza-se a variável corpo para mudar o style->background do body em html
+
+        //Existem outra maneiras de selecionar, como: getElementById(''), getElementsByName('')[], getElementsByClass('')[].
+        //Exemplo
+        var divisao = document.getElementById('msg')
+        divisao.style.background = 'green'
+        // divisao.innerText = 'Olá'   Altera o texto contido na variável
+
+        //Outra forma de selecionar é atravé do document.querySelector('')
+        //Exemplo
+        var divisao2 = document.querySelector('div#msg') //Assim pode-se utilizar a sintaxe do CSS que é div#msg quando se utiliza ID mas também poderia ser div.msg caso estivessemos utilizando classes na div
+        divisao2.style.color = 'black'
+
+
+        
+    </script>
+</body>
+</html> 

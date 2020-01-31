@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(182, 182, 236);
+            font: normal 20pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Me livrei da maldição</p>
+    <script>
+       var n1 = window.prompt("Digite um número:") // O comando prompt sempre retorna uma STRING!!!
+       n1 = Number.parseInt(n1) // Forma de converter uma variável depois que ela foi atribuida
+       var n2 = Number.parseInt(window.prompt("Digite outro número: ")) // Forma direta de converter uma variável já na sua atribuição
+       //OBS.: é possível converter usando apenas Number(n1), dessa forma o Js escolhe sozinho o tipo(int ou float) que será convertido baseado nas operações que serão feitas com esses valores.
+       var sum = n1+n2 //O símbolo + em Js pode significar soma ou concatenação, para somar o tipo de todas as variáveis da opereção deve ser Number, caso contrário ele fará uma concatenação.
+       window.alert("A soma dos números é: " + sum)
+        //Existe duas formas de formatação de string, a primeira é a utilizada anteriormente com concatenação através do simbolo de +
+       window.alert(`A soma de ${n1} e ${n2} é igual a ${sum}`) // A segunda é utilizando um placeholder ${}. É necessário utilizar a crase `, pois ela permite interpolação na string.
+       n1 = String(n1) //Primeira forma de conversão para string
+       n2 = n2.toString() //Segunda forma de conversão para string
+       window.alert("Valor concatenado: " + n1 + n2)
+       //Existe duas formas de formatação de string, a primeira é a utilizada anteriormente com concatenação através do simbolo de +
+    </script>
+</body>
+</html>

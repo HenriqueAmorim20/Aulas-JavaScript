@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Somando números</title>
+    <style>
+        Body {
+            background-color: rgb(158, 158, 236);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Somando números</h2>
+    <!-- Caixas de texto que recebem numeros -->
+    <input type="number" name="nN1" id="iN1" placeholder="Ex.: 5">
+    <input type="number" name="nN2" id="iN2" placeholder="Ex.: 6">
+    <!-- Botão que dispara a função soma() quando acionado -->
+    <input type="button" name="nB" value="somar" id="iB">
+    <div id="res"></div>
+
+    <script>
+        //Cria um listener bara o botão que chama a função soma()
+        var but = document.querySelector("input#iB")
+        but.addEventListener('click', soma)
+
+        function soma() {
+            //primeiro, é obtido um elemento(caixa de inout) pelo seu id. Em seguida a função .value pega o valor contido nesse elemento, depois ele pe convertido para o type Number, e por fim é atribuido a uma variavel
+            var vn1 = Number((document.getElementById('iN1')).value)
+            var vn2 = Number((document.getElementById('iN2')).value)
+
+
+            var soma = vn1 + vn2;
+
+            // Atribui a div#res à variável r
+            var r = document.querySelector('div#res')
+            //Modifica o HTML completo(incluindo tags) da variavel r, que automaticamente modifica a div#res
+            r.innerHTML = `A soma de ${vn1} com ${vn2} é igual a: <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+
+</html>

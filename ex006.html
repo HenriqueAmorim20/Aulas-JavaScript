@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+    <style>
+        div{
+            font: normal 15pt Arial;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            line-height: 200px;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+     
+    <!-- Div com os eventos incluidos nela -->
+    <div id="area" onclick="clicar1()" onmouseenter="entrar1()" onmouseout="sair1()"> interaja...</div>
+    <!-- Div sem os eventos incluidos nela -->
+    <div id="area2">interaja...</div>
+
+    <script>
+        // Declaração de 2 variáveis referentes a duas divs diferentes
+        var a = window.document.querySelector('div#area')
+        var a2 = window.document.querySelector('div#area2')
+
+        //Para que a div possa ficar sem o eventos na parte HTML, deve-se criar EventListeners, que farão a mesma função chamando as funções do javascript
+        a2.addEventListener('click', clicar2)
+        a2.addEventListener('mouseenter', entrar2)
+        a2.addEventListener('mouseout', sair2)
+    
+
+        //Funções que fazem alterações nas divs
+        function clicar1(){
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function clicar2(){
+            a2.innerText = 'Clicou!'
+            a2.style.background = 'red'
+        }
+        
+        function entrar1(){
+            a.innerText = 'Entrou!'
+        }
+        function entrar2(){
+            a2.innerText = 'Entrou!'
+        }
+        function sair1(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        function sair2(){
+            a2.innerText = 'Saiu!'
+            a2.style.background = 'green'
+        }
+
+        /*Exemplos de eventos com o mouse em js: 
+        -mouseenter(evento disparado assim que o mouse entra na area desejada)
+        -mousemove(evento disparado sempre que o mouse se movimenta na area)
+        -mouseout(Evento disparado assim que o mouse sai da area)
+        -mousedown(Evento disparado quando o botão do mouse é segurado)
+        -mouseup(Evento disparado assim que o usoario solta o click na area)
+        -click(Evento disparado com o click do usuario na area)*/
+
+    </script>
+</body>
+</html>
