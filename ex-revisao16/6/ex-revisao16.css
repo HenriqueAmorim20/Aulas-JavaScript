@@ -3,31 +3,28 @@
 body{
     background-color: rgb(101, 101, 248);
     font: normal 15pt Arial;
-    text-align: center;
 }
 
 header{
     color: white;
     margin: 50px;
-    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    text-align: center;
 }
 
-section{
+section {
     background-color: cornsilk;
     border-radius: 10px;
     width: 600px;
     margin: auto;
     padding: 20px;
     box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    overflow: hidden;
 }
 
-img{
-    position: relative;
-    margin: 30px;
-}
 
 footer{
+    text-align: center;
     font-style: italic;
-    border-top: 1px solid rgba(0, 0, 0, 0.479);
-    margin-top: 50px;
+    color: white;
 }
+    

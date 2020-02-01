@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo de exercício</title>
+    <link rel="stylesheet" href="ex-revisao16.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+
+        <div id='user'>
+            <p><label for="inum">Início:</label> <input type="number" id="inum" name="nnum"></p>
+            <p><label for="ifim">Fim:</label> <input type="number" id="ifim" name="nfim"></p>
+            <p><label for="ipasso">Passo:</label> <input type="number" id="ipasso" name="npasso" min=0></p>
+            <input type="button" value="Contar" name="nBut" id="iBut" onclick="contar()">
+        </div>
+        <div id="msg">
+            <p id="res">
+                Preparando a contagem!
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>
+            Copyright &copy; Henrique Amorim
+        </p>
+
+    </footer>
+
+    <script src="ex-revisao16.js"></script>
+
+</body>
+
+</html>
